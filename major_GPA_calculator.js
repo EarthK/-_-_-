@@ -26,7 +26,8 @@ if(returnVal){
     for(var i=1 ; i<table.rows.length ;i++)
     {
         if(table.rows[i].cells[4].innerHTML.indexOf("전공")!=-1
-		&& table.rows[i].cells[6].innerHTML != 'P')
+		&& table.rows[i].cells[6].innerHTML != 'P'
+	  	&& table.rows[i].cells[6].innerHTML != 'NP')
 	{
             var 교과목별평점 = get교과목별평점(table.rows[i].cells[6].innerHTML);
             var 학점수 = Number(table.rows[i].cells[5].innerHTML);
@@ -40,7 +41,8 @@ if(returnVal){
 else{
     for(var i=1 ; i<table.rows.length ; i++)
     {
-        if(table.rows[i].cells[6].innerHTML != 'P')
+        if(table.rows[i].cells[6].innerHTML != 'P' 
+	   && table.rows[i].cells[6].innerHTML != 'NP')
 	{
             var 교과목별평점 = get교과목별평점(table.rows[i].cells[6].innerHTML);
             var 학점수 = Number(table.rows[i].cells[5].innerHTML);
